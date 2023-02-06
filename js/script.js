@@ -128,15 +128,18 @@ function changelight(){
 	} else if (localStorage.light == "off"){
 		localStorage.lightcode = "<style>body{background-color: white; transition-duration: 1s;} #novideobg{color: black; transition-duration: 1s;} footer{background-color: #3a3a3a;} footer table tbody{color: #959595;} .octicon-mark-github{fill: white; transition-duration: 1s;}.action-button { transition-duration: 1s; padding: 10px 40px; float: left; border-radius: 10px; font-family: 'Ubuntu', arial; font-size: 25px; color: #ffffff; text-decoration: none; background-color: #3498DB; border-bottom: 5px solid #2980B9; text-shadow: 0px -2px #2980B9; transition: all 0.1s; -webkit-transition: all 0.1s;} .action-button:active { transform: translate(0px,5px); -webkit-transform: translate(0px,5px); border-bottom: 1px solid; transition-duration: 1s;}</style>";
 		localStorage.light = "on";
-	} else if (localStorage.light == undefined){
-		localStorage.lightcode = "<style>body{background-color: white; transition-duration: 1s;} #novideobg{color: black; transition-duration: 1s;} footer{background-color: #3a3a3a;} footer table tbody{color: #959595;} .octicon-mark-github{fill: white; transition-duration: 1s;}.action-button { transition-duration: 1s; padding: 10px 40px; float: left; border-radius: 10px; font-family: 'Ubuntu', arial; font-size: 25px; color: #ffffff; text-decoration: none; background-color: #3498DB; border-bottom: 5px solid #2980B9; text-shadow: 0px -2px #2980B9; transition: all 0.1s; -webkit-transition: all 0.1s;} .action-button:active { transform: translate(0px,5px); -webkit-transform: translate(0px,5px); border-bottom: 1px solid; transition-duration: 1s;}</style>";
-		localStorage.light = "on";
-	} else if (localStorage.light == null){
-		localStorage.lightcode = "<style>body{background-color: white; transition-duration: 1s;} #novideobg{color: black; transition-duration: 1s;} footer{background-color: #3a3a3a;} footer table tbody{color: #959595;} .octicon-mark-github{fill: white; transition-duration: 1s;}.action-button { transition-duration: 1s; padding: 10px 40px; float: left; border-radius: 10px; font-family: 'Ubuntu', arial; font-size: 25px; color: #ffffff; text-decoration: none; background-color: #3498DB; border-bottom: 5px solid #2980B9; text-shadow: 0px -2px #2980B9; transition: all 0.1s; -webkit-transition: all 0.1s;} .action-button:active { transform: translate(0px,5px); -webkit-transform: translate(0px,5px); border-bottom: 1px solid; transition-duration: 1s;}</style>";
-		localStorage.light = "on";
 	}
-	
 	document.getElementById("styleinsert").innerHTML=localStorage.lightcode;
 }
 
 initpage();
+
+if (localStorage.light == undefined){
+	localStorage.lightcode = "<style>body{background-color: white; transition-duration: 1s;} #novideobg{color: black; transition-duration: 1s;} footer{background-color: #3a3a3a;} footer table tbody{color: #959595;} .octicon-mark-github{fill: white; transition-duration: 1s;}.action-button { transition-duration: 1s; padding: 10px 40px; float: left; border-radius: 10px; font-family: 'Ubuntu', arial; font-size: 25px; color: #ffffff; text-decoration: none; background-color: #3498DB; border-bottom: 5px solid #2980B9; text-shadow: 0px -2px #2980B9; transition: all 0.1s; -webkit-transition: all 0.1s;} .action-button:active { transform: translate(0px,5px); -webkit-transform: translate(0px,5px); border-bottom: 1px solid; transition-duration: 1s;}</style>";
+	localStorage.light = "on";
+} else if (localStorage.light == null){
+	localStorage.lightcode = "<style>body{background-color: white; transition-duration: 1s;} #novideobg{color: black; transition-duration: 1s;} footer{background-color: #3a3a3a;} footer table tbody{color: #959595;} .octicon-mark-github{fill: white; transition-duration: 1s;}.action-button { transition-duration: 1s; padding: 10px 40px; float: left; border-radius: 10px; font-family: 'Ubuntu', arial; font-size: 25px; color: #ffffff; text-decoration: none; background-color: #3498DB; border-bottom: 5px solid #2980B9; text-shadow: 0px -2px #2980B9; transition: all 0.1s; -webkit-transition: all 0.1s;} .action-button:active { transform: translate(0px,5px); -webkit-transform: translate(0px,5px); border-bottom: 1px solid; transition-duration: 1s;}</style>";
+	localStorage.light = "on";
+} else{
+	document.getElementById("styleinsert").innerHTML=localStorage.lightcode;
+}
