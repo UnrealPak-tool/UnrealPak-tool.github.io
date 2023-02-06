@@ -1,0 +1,258 @@
+/* Writing font */
+body{
+	font-family: 'Ubuntu', arial;
+}
+
+a{
+	color: blue;
+}
+
+/* header */
+header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+#menufond{
+width: 100%;
+background: linear-gradient(#7cb7ff, #1b81ff);
+border-radius: 0px 0px 4px 4px;
+box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2),
+			0px 1px 0px 1px rgba(255, 255, 255, 0.5) inset,
+			0px -3px 0px 1px rgba(0, 0, 0, 0.1) inset;
+overflow : hidden;
+height : 50px;
+}
+
+#menu{
+	font-family: "Trebuchet MS";
+    display: table;
+	margin-right : auto;
+	margin-left : auto;
+	margin-top : 0;
+	padding : 0;
+}
+
+#menu li{
+    display: table-cell;
+	width: 180px;
+	transition:1s;
+}
+
+#menu li:hover{
+	width:190px;
+	transition:1s;
+}
+
+#menu a{
+	display: block;
+	line-height: 46px;
+    text-align: center;
+	text-decoration : none;
+	color : white;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+	transition : text-shadow,color 1s;
+	position:relative;  /* utilse pour l'affichage du point */
+	
+}
+
+#menu a:hover{
+	background: rgba(255,255,255,0.1);
+	border-bottom: solid 4px rgba(255,255,255,0.8);
+	color : #373737;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+	transition : text-shadow,color 1s;
+}
+
+#menu a::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+	transition:1s;
+	width: 0;
+	height: 0;
+	border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 5px solid rgba(0,0,0,0.2);
+}
+
+#menu a:hover::before{
+	border-color: rgba(255, 255, 255, 0.5) transparent transparent;
+	box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+	transition:1s
+}
+
+/* home video */
+* {
+	margin: 0;
+}
+
+.bloc {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+}
+
+/* cutrain */
+.bloc .curtain{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -90;
+	content: "";
+	background-color: #0000007d;
+}
+
+/* video */			
+.bloc video{
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -100;
+}
+
+/* #home section */
+#home{
+	color: white;
+}
+
+#homeTitle{
+	font-size: 100px;
+}
+
+#welcomeParagraph{
+	font-size: 60px;
+}
+
+/* #about section */
+#aboutTitle{
+	font-size: 60px;
+}
+
+#aboutParagraph{
+	font-size: 30px;
+}
+
+/* #download section */
+
+#downloadTitle{
+	font-size: 60px;
+}
+
+#downloadParagraph{
+	font-size: 30px;
+}
+
+/* dropdown */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+:root {
+  --select-border: #777;
+  --select-focus: blue;
+  --select-arrow: var(--select-border);
+}
+
+.select {
+  width: 100%;
+  min-width: 15ch;
+  max-width: 30ch;
+  border: 1px solid var(--select-border);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  position: relative;
+}
+
+.select::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: var(--select-arrow);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  justify-self: end;
+}
+
+select,
+.select:after {
+  grid-area: select;
+}
+
+select:focus + .focus {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: 2px solid var(--select-focus);
+  border-radius: inherit;
+}
+
+/* contact */
+/* contact button */
+.contact-button {
+    padding: 10px 40px;
+    float: left;
+    border-radius: 10px;
+    font-family: 'Ubuntu', arial;
+    font-size: 25px;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #666666;
+    border-bottom: 5px solid #979797;
+    text-shadow: 0px -2px #303030;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    width: 235px;
+}
+
+.contact-button:active {
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    border-bottom: 1px solid;
+}
+
+footer table tbody a{
+	color: #959595;
+	font-size: 32px;
+}
+
+/* Howto */
+.tutorial-box{
+	border-radius: 25px;
+	border-color: blue;
+    border-width: 5px;
+    border-style: inset;
+    border-image: initial;
+}
